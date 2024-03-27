@@ -25,7 +25,7 @@
 
         <div class="mb-3">
             <label for="birthDate" class="form-label">Date of Birth</label>
-            <input type="text" class="form-control" placeholder="21/03/2024" name="birthDate" data-th-field="*{birthDate}">
+            <input type="date" class="form-control" name="birthDate" data-th-field="*{birthDate}">
             <div style="color: red" data-th-if="${#fields.hasErrors('birthDate')}" data-th-errors="*{birthDate}"></div>
         </div>
 
