@@ -46,7 +46,9 @@
                     <td data-th-text="${m.genre}"></td>
                     <td data-th-text="${m.director}"></td>
                     <td data-th-text="${m.rating}"></td>
-                    <form data-th-action="@{/book/{movieId}(movieId=${m.movieId},birthDate=${#dates.format(login.birthDate, 'yyyy-MM-dd')})}" method="POST">
+                    <form data-th-action="@{/book/{movieId}(movieId=${m.movieId})}" method="POST">
+                        <input type="hidden" name="email" data-th-value="*{login.email}">
+                        <input type="hidden" name="birthDate" data-th-value="*{#dates.format(login.birthDate, 'yyyy-MM-dd')}">
                     <td>
                         <button type="submit">Book</button>
                     </td>
