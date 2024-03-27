@@ -18,7 +18,6 @@ import sg.edu.nus.iss.ibfb4ssfassessment.model.Movie;
 import sg.edu.nus.iss.ibfb4ssfassessment.service.DatabaseService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MovieController {
