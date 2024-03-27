@@ -35,7 +35,7 @@ public class DatabaseService {
         hashOps = template.opsForHash();
         Integer movieId = movie.getMovieId();
         JsonObject movieJson = movieToJson(movie);
-        hashOps.put(Util.KEY_MOVIES, movieId.toString(), movieJson.toString());
+        hashOps.putIfAbsent(Util.KEY_MOVIES, movieId.toString(), movieJson.toString());
 
     }
 

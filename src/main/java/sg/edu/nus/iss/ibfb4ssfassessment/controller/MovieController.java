@@ -66,9 +66,9 @@ public class MovieController {
         LocalDate localDatePG = LocalDate.now().minusYears(13);
 
         if ((birthDateLocal.isAfter(localDatePG)) && (movieRated.equals("PG-13"))) {
-            return "view3";
+            return "BookError";
         } else if ((birthDateLocal.isAfter(localDateR)) && (movieRated.equals("R"))) {
-            return "view3";
+            return "BookError";
         } else {
             model.addAttribute("movieTitle", movie.getTitle());
 
