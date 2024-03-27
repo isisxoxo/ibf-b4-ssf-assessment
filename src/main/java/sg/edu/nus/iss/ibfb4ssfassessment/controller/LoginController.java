@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class LoginController {
 
     // TODO: Task 6
-    @GetMapping(path = "/login")
+    @GetMapping(path = { "/login", "/" })
     public ModelAndView login() {
 
         ModelAndView mav = new ModelAndView("view0");
