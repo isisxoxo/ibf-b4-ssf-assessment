@@ -20,6 +20,7 @@
         <div class="mb-3">
             <label for="email" class="form-label">Email address</label>
             <input type="text" class="form-control" name="email" data-th-field="*{email}">
+            <div style="color: gray;">We'll never share your email with anyone else.</div>
             <div style="color: red" data-th-if="${#fields.hasErrors('email')}" data-th-errors="*{email}"></div>
         </div>
 

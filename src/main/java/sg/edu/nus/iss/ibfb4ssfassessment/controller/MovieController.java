@@ -60,6 +60,10 @@ public class MovieController {
 
         String birthDate = login.getFirst("birthDate");
 
+        if (birthDate == "") { // If no birth date given, cannot book any movie
+            return "BookError";
+        }
+
         LocalDate birthDateLocal = LocalDate.parse(birthDate);
         LocalDate localDateR = LocalDate.now().minusYears(18);
         LocalDate localDatePG = LocalDate.now().minusYears(13);
