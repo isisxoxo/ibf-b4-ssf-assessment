@@ -12,7 +12,7 @@ COPY pom.xml .
 COPY .mvn .mvn
 COPY src src
 
-# Compile into: /target/day17weather-0.0.1-SNAPSHOT.jar
+# Compile into: /target/ibfb4ssfassessment-0.0.1-SNAPSHOT.jar
 RUN /app/mvnw package -Dmaven.test.skip=true
 
 
@@ -26,7 +26,7 @@ FROM openjdk:21-jdk-bullseye
 WORKDIR /app_run
 
 # Copying file from builder instead of locally
-COPY --from=builder /app/target/day17weather-0.0.1-SNAPSHOT.jar .
+COPY --from=builder /app/target/ibfb4ssfassessment-0.0.1-SNAPSHOT.jar .
 COPY --from=builder /app/movies.json /app_run/movies.json
 
 # Run
@@ -35,4 +35,4 @@ ENV PORT=8080
 
 EXPOSE ${PORT}
 
-ENTRYPOINT SERVER_PORT=${PORT} java -jar day17weather-0.0.1-SNAPSHOT.jar
+ENTRYPOINT SERVER_PORT=${PORT} java -jar ibfb4ssfassessment-0.0.1-SNAPSHOT.jar
