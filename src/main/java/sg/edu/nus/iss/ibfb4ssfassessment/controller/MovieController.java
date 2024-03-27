@@ -78,11 +78,4 @@ public class MovieController {
         }
     }
 
-    // Logout
-    @GetMapping(path = "/logout")
-    public String getLogout(HttpSession session) {
-        session.invalidate();
-        return "redirect:/login";
-    }
-
 }
