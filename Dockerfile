@@ -30,7 +30,6 @@ COPY --from=builder /app/target/ibfb4ssfassessment-0.0.1-SNAPSHOT.jar .
 COPY --from=builder /app/movies.json /app_run/movies.json
 
 # Run
-ENV API_KEY=abc123
 ENV PORT=8080
 
 EXPOSE ${PORT}
